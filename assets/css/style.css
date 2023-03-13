@@ -1,0 +1,124 @@
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 2rem auto 5rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.list-item {
+    border-top: 1px solid lightgrey;
+    padding-bottom: 1rem;
+}
+
+.item-tittle {
+    font-size: 1rem;
+    color: blue;
+    transition: all 0.3s;
+}
+.item-text {    
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+}
+
+.list-input {
+    appearance: none;
+    -webkit-appeatance: none;
+    height: 0;
+    width: 0;
+}
+
+.item-plus {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-bottom: 0.2rem;
+    display: none;
+}
+
+.item-img {
+    width: 0;
+    height: 0;
+    transition: all 0.5s;
+    margin: 0 auto;
+}
+
+.list-img {
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.list-input:checked + .item-tittle {
+    color:black;
+}
+
+.list-input:checked ~ .item-tittle .item-img {
+    display: block;
+    height: 100%;
+    width: 70%; 
+    margin: 1rem auto 0;
+}
+
+.list-input:checked + .item-tittle .item-plus {
+    /* display: block; */
+    transform: rotate(45deg);
+}
+
+
+
+@media screen and (min-width: 820px) {
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+    .list-input:checked ~ .item-tittle .item-img {
+        width: 50%; 
+    }
+}
+
+@media screen and (min-width: 1920px) {           
+    .container {
+        width: 50%;
+    }
+
+    .list-input:checked ~ .item-tittle .item-img {
+        width: 40%; 
+    }
+                
+    ul:hover .item-plus {
+        display: block;
+    }
+
+    ul:hover .item-tittle {
+        color: black;
+    }
+    
+    .list-item:hover .item-img {
+        display: block;
+        height: 100%;
+        width: 40%; 
+        margin: 1rem auto 0;
+    }
+}
