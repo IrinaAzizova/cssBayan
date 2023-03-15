@@ -95,17 +95,7 @@ ul {
 
     .list-input:checked ~ .item-tittle .item-img {
         width: 50%; 
-    }
-}
-
-@media screen and (min-width: 1920px) {           
-    .container {
-        width: 50%;
-    }
-
-    .list-input:checked ~ .item-tittle .item-img {
-        width: 40%; 
-    }
+    }    
                 
     ul:hover .item-plus {
         display: block;
@@ -120,5 +110,15 @@ ul {
         height: 100%;
         width: 40%; 
         margin: 1rem auto 0;
+    }
+}
+
+@media screen and (min-width: 1920px) {           
+    .container {
+        width: 50%;
+    }
+
+    .list-input:checked ~ .item-tittle .item-img {
+        width: 40%; 
     }
 }
