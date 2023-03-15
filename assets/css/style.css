@@ -33,6 +33,7 @@ ul {
     font-size: 1rem;
     color: blue;
     transition: all 0.3s;
+    cursor: pointer;
 }
 .item-text {    
     display: flex;
@@ -51,7 +52,8 @@ ul {
     width: 0.5rem;
     height: 0.5rem;
     margin-bottom: 0.2rem;
-    display: none;
+    display: none;    
+    transition: all 0.5s;
 }
 
 .item-img {
